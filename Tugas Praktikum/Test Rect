@@ -1,0 +1,38 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Polimorphisme;
+
+/**
+ *
+ * @author User
+ */
+public class RectTest {
+ 
+      /**
+     * @param args the command line arguments
+     */
+     public static void main(String[] nisa) {
+        Rect kubus1 = new Rect(3,5, 6,6);
+        Rect kubus2 = new Rect(3,2, 5, 5);
+        
+        //objek union dan intersection
+        Rect intersection = kubus2.intersection(kubus1);
+        Rect union = kubus2.union(kubus1);
+        
+        //membuat variable untuk memfromat string, biar mudah
+        String koordinatKubus1 = String.format("[%d, %d ; %d,%d]", kubus1.x1, kubus1.y1, kubus1.x2, kubus1.y2);
+        String koordinatKubus2 = String.format("[%d, %d ; %d,%d]", kubus2.x1, kubus2.y1, kubus2.x2, kubus2.y2);
+        String koordinatUnion = String.format("[%d, %d ; %d,%d]", union.x1, union.y1, union.x2, union.y2);
+        String koordinatIntersect = String.format("[%d, %d ; %d,%d]", intersection.x1, intersection.y1, intersection.x2, intersection.y2);
+        
+        System.out.println("<" + kubus1.x2 +","+ kubus1.y2 + ">" + " is inside the union");
+        System.out.println(koordinatKubus2 + " union " + koordinatKubus1 + " = " + koordinatUnion );
+        System.out.println(koordinatKubus2 + " union " + koordinatKubus1 + " = " + koordinatIntersect );
+        
+    }
+}
+
+
