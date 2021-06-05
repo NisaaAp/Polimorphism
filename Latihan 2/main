@@ -1,0 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Polimorphisme.lat2;
+
+/**
+ *
+ * @author User
+ */
+public class main {
+    /**
+     * @param nisa the command line arguments
+     */
+    public static void main(String[] args) {
+        Line boni = new Line(2, -3, 4, 4);
+        Line bobon = new Line(7, 7, -3, 2);
+        
+    System.out.println("Panjang penggaris boni :" + boni.getLength());
+    System.out.println("Panjang penggaris bobon :" + bobon.getLength());
+    
+    
+    if (bobon.isGreater(bobon, boni)){
+        System.out.println("Penggaris bobon lebih panjang dari boni");
+    }else if (bobon.isLess(bobon, boni)){
+        System.out.println("Penggaris bobon lebih pendek dari boni");
+    }else if (bobon.isEqual(bobon, boni)){
+        System.out.println("Penggaris bobon sama panjang dengan boni");
+        
+    }
+    }
+}
